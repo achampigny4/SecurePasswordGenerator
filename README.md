@@ -1,0 +1,2 @@
+# SecurePasswordGenerator
+JavaScript password generator
