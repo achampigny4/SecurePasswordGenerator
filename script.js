@@ -1,6 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// variables for check boxes
+var numbers = document.querySelector("#numbers");
+var upperCase = document.querySelector("#upper");
+var lowerCase = document.querySelector("#lower");
+var symbols = document.querySelector("#symbol");
+
 // strings of password parameters
 var numbersStr = '123456789';
 // console.log(numbersStr);
@@ -38,6 +44,7 @@ generateBtn.addEventListener("click", writePassword);
 
 //sources used
 
-
+// variables for check boxes
+// https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
 //strings of parameters into split into arrays
 // https://www.tutorialrepublic.com/faq/how-to-explode-a-string-in-javascript.php#:~:text=Answer%3A%20Use%20the%20JavaScript%20split,array%2C%20containing%20the%20splitted%20values.
