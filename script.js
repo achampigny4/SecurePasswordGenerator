@@ -15,6 +15,19 @@ var symbols = document.querySelector("#symbol");
 var characters = document.querySelector("#characters")
 // console.log(characters.value);
 
+
+// define generate password
+function genPassword(event) {
+  event.preventDefault();
+
+  var total = document.querySelector("#characters").textContent;
+  var characters = document.querySelector("#generate").value;
+
+  var charTotal = (total / numPeople).toFixed(2);
+  document.querySelector("#characters").textContent = charTotal;
+}
+
+function generatePassword() {
 // strings of password parameters
 var numbersStr = '123456789';
 // console.log(numbersStr);
@@ -34,6 +47,7 @@ var lowerArray = lowerCaseStr.split(" ");
 // console.log(lowerArray);
 var symbolArray = symbolsStr.split(" ");
 // console.log(symbolArray);
+}
 
 // Write password to the #password input
 function writePassword() {
