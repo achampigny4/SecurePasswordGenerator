@@ -26,8 +26,10 @@
       <input type="checkbox" id="upper" name="select"> Upper Case</input>
       <input type="checkbox" id="lower" name="select"> Lower Case</input>
       <input type="checkbox" id="symbol" name="select"> Symbols</input>
-      <div class="card-body">
+      <!-- Select number of characters between 8 and 128-->
+      <input id="characters" type="number" min="8" max="128">Number of characters</input>
         <!-- box where password will show after generated -->
+      <div class="card-body">
         <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password">
           </textarea>
       </div>

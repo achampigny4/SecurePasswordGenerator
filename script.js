@@ -1,18 +1,26 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// variables for check boxes
+// check boxes to select password criteria
 var numbers = document.querySelector("#numbers");
+// console.log(numbers.value);
 var upperCase = document.querySelector("#upper");
+// console.log(upperCase.value);
 var lowerCase = document.querySelector("#lower");
+// console.log(lowerCase.value);
 var symbols = document.querySelector("#symbol");
+// console.log(symbols.value);
+
+//select number of characters between 8 and 128
+var characters = document.querySelector("#characters")
+// console.log(characters.value);
 
 // strings of password parameters
 var numbersStr = '123456789';
 // console.log(numbersStr);
 var upperCaseStr = 'ABCDEFGHIJKLMNOPQRSTUV';
 // console.log(upperCaseStr); 
-var lowerCaseStr = 'abcdefghijklmnopqrstuv'; 
+var lowerCaseStr = 'abcdefghijklmnopqrstuv';
 // console.log(lowerCaseStr); 
 var symbolsStr = '!@#$%^&*()_+-=<>?,./:";[]{}';
 // console.log(symbolsStr); 
@@ -44,7 +52,12 @@ generateBtn.addEventListener("click", writePassword);
 
 //sources used
 
-// variables for check boxes
+// check boxes to select password criteria
 // https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
+// https://www.w3schools.com/jsref/prop_checkbox_checked.asp
 //strings of parameters into split into arrays
 // https://www.tutorialrepublic.com/faq/how-to-explode-a-string-in-javascript.php#:~:text=Answer%3A%20Use%20the%20JavaScript%20split,array%2C%20containing%20the%20splitted%20values.
+// generate random
+// https://stackoverflow.com/questions/5836833/create-an-array-with-random-values
+
+
