@@ -15,51 +15,75 @@ var symbols = document.querySelector("#symbol");
 var characters = document.querySelector("#characters")
 // console.log(characters.value);
 
+// start with no password length
+var arrayLength = [];
+length = characters;
+console.log(characters.value)
+// // loop over criteria
+// for (var i = 0; i < arrayLength; i++) {
+//   function arrayLength() {
+//     characters = document.querySelector("characters").value;
+//     document.querySelector("characters").innerHTML = "" + characters;
+  // }
+  //password length
+  // var characters = document.querySelector("writePassword").value;
+  // /// if and else 
+  // if (length < 8)
 
-// define generate password
-function genPassword(event) {
-  event.preventDefault();
+    // define generate password
+    function genPassword(event) {
+      event.preventDefault();
 
-  var total = document.querySelector("#characters").textContent;
-  var characters = document.querySelector("#generate").value;
+      var total = document.querySelector("#characters").textContent;
+      var characters = document.querySelector("#generate").value;
 
-  var charTotal = (total / numPeople).toFixed(2);
-  document.querySelector("#characters").textContent = charTotal;
-}
+      var charTotal = (total / numPeople).toFixed(2);
+      document.querySelector("#characters").textContent = charTotal;
+    }
 
-function generatePassword() {
-// strings of password parameters
-var numbersStr = '123456789';
-// console.log(numbersStr);
-var upperCaseStr = 'ABCDEFGHIJKLMNOPQRSTUV';
-// console.log(upperCaseStr); 
-var lowerCaseStr = 'abcdefghijklmnopqrstuv';
-// console.log(lowerCaseStr); 
-var symbolsStr = '!@#$%^&*()_+-=<>?,./:";[]{}';
-// console.log(symbolsStr); 
+  function generatePassword() {
+    // strings of password parameters
+    var numbersStr = '123456789';
+    // console.log(numbersStr);
+    var upperCaseStr = 'ABCDEFGHIJKLMNOPQRSTUV';
+    // console.log(upperCaseStr); 
+    var lowerCaseStr = 'abcdefghijklmnopqrstuv';
+    // console.log(lowerCaseStr); 
+    var symbolsStr = '!@#$%^&*()_+-=<>?,./:";[]{}';
+    // console.log(symbolsStr); 
 
-//strings of parameters into split arrays
-var numbersArray = numbersStr.split(" ");
-// console.log(numbersArray);
-var upperArray = upperCaseStr.split(" ");
-// console.log(upperArray);
-var lowerArray = lowerCaseStr.split(" ");
-// console.log(lowerArray);
-var symbolArray = symbolsStr.split(" ");
-// console.log(symbolArray);
-}
+    //strings of parameters into split arrays
+    var numbersArray = numbersStr.split(" ");
+    // console.log(numbersArray);
+    var upperArray = upperCaseStr.split(" ");
+    // console.log(upperArray);
+    var lowerArray = lowerCaseStr.split(" ");
+    // console.log(lowerArray);
+    var symbolArray = symbolsStr.split(" ");
+    // console.log(symbolArray);
+  }
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  if (numbers.checked === true) {
+    // numbers show in password
 
-  passwordText.value = password;
+    console.log(numbersArray) //??
+  } else {
+    numbers === false
+    // no numbers in password
+  }
 
-}
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+
+  }
+
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
 
 
 
@@ -73,5 +97,5 @@ generateBtn.addEventListener("click", writePassword);
 // https://www.tutorialrepublic.com/faq/how-to-explode-a-string-in-javascript.php#:~:text=Answer%3A%20Use%20the%20JavaScript%20split,array%2C%20containing%20the%20splitted%20values.
 // generate random
 // https://stackoverflow.com/questions/5836833/create-an-array-with-random-values
-
-
+// password length
+// https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
