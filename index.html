@@ -14,7 +14,7 @@
   <div class="wrapper">
     <!-- main header of the page -->
     <header>
-      <h1>Password Generator</h1>
+      <h1>Secure Password Generator</h1>
     </header>
     <!-- card area where password criteria will be selecter and password will be generated -->
     <div class="card">
@@ -27,7 +27,7 @@
       <input type="checkbox" id="lower" name="select"> Lower Case</input>
       <input type="checkbox" id="symbol" name="select"> Symbols</input>
       <!-- Select number of characters between 8 and 128-->
-      <input id="characters" type="number" min="8" max="128">Number of characters</input>
+      <input id="characters" type="number" min="8" max="128" required>Number of characters</input>
         <!-- box where password will show after generated -->
       <div class="card-body">
         <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password">
