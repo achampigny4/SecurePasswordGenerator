@@ -1,95 +1,121 @@
-// Assignment Code
+// // Assignment Code
 var generateBtn = document.querySelector("#generate");
+// // check boxes to select password criteria
+var numbersEl = document.querySelector("#numbers");
+var upperCaseEl = document.querySelector("#upper");
+var lowerCaseEl = document.querySelector("#lower");
+var symbolsEl = document.querySelector("#symbol");
+var CharactersEl = document.getElementById("characters");
 
-// check boxes to select password criteria
-var numbers = document.querySelector("#numbers");
-// console.log(numbers.value);
-var upperCase = document.querySelector("#upper");
-// console.log(upperCase.value);
-var lowerCase = document.querySelector("#lower");
-// console.log(lowerCase.value);
-var symbols = document.querySelector("#symbol");
-// console.log(symbols.value);
+// //select number of characters between 8 and 128
+// var characters = document.querySelector("#characters");
+// // console.log(characters.value);
 
-//select number of characters between 8 and 128
-var characters = document.querySelector("#characters")
-// console.log(characters.value);
+// //length
 
-// start with no password length
-var arrayLength = [];
-length = characters;
-console.log(characters.value)
-// // loop over criteria
-// for (var i = 0; i < arrayLength; i++) {
-//   function arrayLength() {
-//     characters = document.querySelector("characters").value;
-//     document.querySelector("characters").innerHTML = "" + characters;
+// // var password = "";
+// // for (var i = 0; i < arrayLength; i++) {
+// //   password = password + characters.charAt(Math.floor(Math.random() = Math.floor(characters)));
+
+//   // start with no password length
+//   // var arrayLength = [];
+//   // length = characters;
+//   // console.log(characters.value)
+//   // // loop over criteria
+//   // for (var i = 0; i < arrayLength; i++) {
+//   //   function arrayLength() {
+//   //     characters = document.querySelector("characters").value;
+//   //     document.querySelector("characters").innerHTML = "" + characters;
+//   // }
+//   //password length
+//   // var characters = document.querySelector("writePassword").value;
+//   // /// if and else 
+//   // if (length < 8)
+
+//   // define generate password
+//   function genPassword(event) {
+//     event.preventDefault();
+
+//     var total = document.querySelector("#characters").textContent;
+//     var characters = document.querySelector("#generate").value;
+
+//     var charTotal = (total / numPeople).toFixed(2);
+//     document.querySelector("#characters").textContent = charTotal;
+//   }
+
+  // function generatePassword() {
+  //   // strings of password parameters
+  //   var numbersStr = 
+  //   // console.log(numbersStr);
+  //   var upperCaseStr = 'ABCDEFGHIJKLMNOPQRSTUV';
+  //   // console.log(upperCaseStr); 
+  //   var lowerCaseStr = 'abcdefghijklmnopqrstuv';
+  //   // console.log(lowerCaseStr); 
+  //   var symbolsStr = '!@#$%^&*()_+-=<>?,./:";[]{}';
+  //   // console.log(symbolsStr); 
+
+  //   //strings of parameters into split arrays
+  //   var numbersArray = numbersStr.split(" ");
+  //   // console.log(numbersArray);
+  //   var upperArray = upperCaseStr.split(" ");
+  //   // console.log(upperArray);
+  //   var lowerArray = lowerCaseStr.split(" ");
+  //   // console.log(lowerArray);
+  //   var symbolArray = symbolsStr.split(" ");
+  //   // console.log(symbolArray);
   // }
-  //password length
-  // var characters = document.querySelector("writePassword").value;
-  // /// if and else 
-  // if (length < 8)
-
-    // define generate password
-    function genPassword(event) {
-      event.preventDefault();
-
-      var total = document.querySelector("#characters").textContent;
-      var characters = document.querySelector("#generate").value;
-
-      var charTotal = (total / numPeople).toFixed(2);
-      document.querySelector("#characters").textContent = charTotal;
-    }
-
-  function generatePassword() {
-    // strings of password parameters
-    var numbersStr = '123456789';
-    // console.log(numbersStr);
-    var upperCaseStr = 'ABCDEFGHIJKLMNOPQRSTUV';
-    // console.log(upperCaseStr); 
-    var lowerCaseStr = 'abcdefghijklmnopqrstuv';
-    // console.log(lowerCaseStr); 
-    var symbolsStr = '!@#$%^&*()_+-=<>?,./:";[]{}';
-    // console.log(symbolsStr); 
-
-    //strings of parameters into split arrays
-    var numbersArray = numbersStr.split(" ");
-    // console.log(numbersArray);
-    var upperArray = upperCaseStr.split(" ");
-    // console.log(upperArray);
-    var lowerArray = lowerCaseStr.split(" ");
-    // console.log(lowerArray);
-    var symbolArray = symbolsStr.split(" ");
-    // console.log(symbolArray);
+// consolidated strings and generate random characters
+  function getRandomNumber() {
+    var numbers = '123456789';
+    return numbers[Math.floor(Math.random() * numbers.length)];
   }
+  console.log(getRandomNumber());
 
-  if (numbers.checked === true) {
-    // numbers show in password
-
-    console.log(numbersArray) //??
-  } else {
-    numbers === false
-    // no numbers in password
+  function getRandomUpperCase() {
+    var upperCase = 'ABCDEFGHIJKLMNOPQRSTUV';
+    return upperCase[Math.floor(Math.random() * upperCase.length)];
   }
+  // console.log(getRandomUpperCase());
 
-
-  // Write password to the #password input
-  function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
-
+  function getRandomLowerCase() {
+    var lowerCase = 'abcdefghijklmnopqrstuv';
+    return lowerCase[Math.floor(Math.random() * lowerCase.length)];
   }
+  // console.log(getRandomLowerCase());
 
-  // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
+  function getRandomSymbols() {
+    const symbols = '!@#$%^&*()_+-=<>?,./:";[]{}';
+    return symbols[Math.floor(Math.random() * symbols.length)];
+  }
+  // console.log(getRandomSymbols());
+
+  // if (numbers.checked === true) {
+  //   // numbers show in password
+
+  //   console.log(numbersArray) //??
+  // } else {
+  //   numbers === false
+  //   // no numbers in password
+  // }
+
+
+  // // Write password to the #password input
+  // function writePassword() {
+  //   var password = generatePassword();
+  //   var passwordText = document.querySelector("#password");
+
+  //   passwordText.value = password;
+
+  // }
+
+  // // Add event listener to generate button
+  // generateBtn.addEventListener("click", writePassword);
+  // // numbers.addEventListener("click", writePassword);
 
 
 
 
 //sources used
-
 // check boxes to select password criteria
 // https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
 // https://www.w3schools.com/jsref/prop_checkbox_checked.asp
@@ -98,4 +124,4 @@ console.log(characters.value)
 // generate random
 // https://stackoverflow.com/questions/5836833/create-an-array-with-random-values
 // password length
-// https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+// https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation 
