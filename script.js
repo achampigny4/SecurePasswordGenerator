@@ -22,13 +22,6 @@ var random = {
 // function genPassword(event) {
 //   event.preventDefault();
 
-//   var total = document.querySelector("#characters").textContent;
-//   var characters = document.querySelector("#generate").value;
-
-//   var charTotal = (total / numPeople).toFixed(2);
-//   document.querySelector("#characters").textContent = charTotal;
-// }
-
 // criteria selected in checkboxs
 generate.addEventListener('click', () => {
   var Characters = CharactersEl.value;
@@ -50,36 +43,33 @@ generate.addEventListener('click', () => {
 function generatePassword(number, upper, lower, symbol) {
   // start with no password
   var Password = "";
-
-  // length
+  // var length = Number
+  // var characters = length;
   // number of checked criteria
   var criteria = {};
-  if (numbers) Password += number;
+  if (numbersEl) Password += number;
   // console.log(numbers)
-  if (upperCase) Password += upper;
-  if (lowerCase) Password += lower;
-  if (symbols) Password += symbol;
+  if (upperCaseEl) Password += upper;
+  if (lowerCaseEl) Password += lower;
+  if (symbolsEl) Password += symbol;
+
+  //   // for (var i = 0; i < characters; i++) {
+  //   //       function characters() {
+  //   //     characters = document.querySelector("characters").value;
+  //   //     document.querySelector("characters").innerHTML = "" + characters;
+  //   //       }
 };
 
 
-// // for (var i = 0; i < characters; i++) {
-// //   password = password + characters.charAt(Math.floor(Math.random() = Math.floor(characters)));
-
-//   // start with no password length
-//   // var characters = [];
-//   // length = characters;
-//   // console.log(characters.value)
-//   // // loop over criteria
-//   // for (var i = 0; i < characters; i++) {
-//   //   function characters() {
-//   //     characters = document.querySelector("characters").value;
-//   //     document.querySelector("characters").innerHTML = "" + characters;
-//   // }
-//   //password length //select number of characters between 8 and 128
-//   // var characters = document.querySelector("writePassword").value;
-//   // /// if and else 
-//   // if (length < 8)
-
+// function generateLength () {
+//   var length = Number
+//   var characters = length;
+// for (var i = 0; i < characters; i++) ;
+// // {
+// //   function characters() {
+// // characters = document.querySelector("characters").value;
+// // document.querySelector("characters").innerHTML = "" + characters;
+//   }
 
 // strings of characters
 function getRandomNumber() {
