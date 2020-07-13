@@ -53,8 +53,12 @@ function generatePassword(number, upper, lower, symbol) {
 
   // length
   // number of checked criteria
-  var criteria = number + upper + lower + symbol;
-  console.log(criteria);
+  var criteria = {};
+  if (numbers) Password += number;
+  // console.log(numbers)
+  if (upperCase) Password += upper;
+  if (lowerCase) Password += lower;
+  if (symbols) Password += symbol;
 };
 
 
