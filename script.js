@@ -6,6 +6,7 @@ var upperCaseEl = document.querySelector("#upper");
 var lowerCaseEl = document.querySelector("#lower");
 var symbolsEl = document.querySelector("#symbol");
 var CharactersEl = document.getElementById("characters");
+var passwordEl = document.getElementById("password");
 
 // //select number of characters between 8 and 128
 // var characters = document.querySelector("#characters");
@@ -33,43 +34,28 @@ var CharactersEl = document.getElementById("characters");
 //   // if (length < 8)
 
 //   // define generate password
-//   function genPassword(event) {
-//     event.preventDefault();
+  // function genPassword(event) {
+  //   event.preventDefault();
 
-//     var total = document.querySelector("#characters").textContent;
-//     var characters = document.querySelector("#generate").value;
+  //   var total = document.querySelector("#characters").textContent;
+  //   var characters = document.querySelector("#generate").value;
 
-//     var charTotal = (total / numPeople).toFixed(2);
-//     document.querySelector("#characters").textContent = charTotal;
-//   }
-
-  // function generatePassword() {
-  //   // strings of password parameters
-  //   var numbersStr = 
-  //   // console.log(numbersStr);
-  //   var upperCaseStr = 'ABCDEFGHIJKLMNOPQRSTUV';
-  //   // console.log(upperCaseStr); 
-  //   var lowerCaseStr = 'abcdefghijklmnopqrstuv';
-  //   // console.log(lowerCaseStr); 
-  //   var symbolsStr = '!@#$%^&*()_+-=<>?,./:";[]{}';
-  //   // console.log(symbolsStr); 
-
-  //   //strings of parameters into split arrays
-  //   var numbersArray = numbersStr.split(" ");
-  //   // console.log(numbersArray);
-  //   var upperArray = upperCaseStr.split(" ");
-  //   // console.log(upperArray);
-  //   var lowerArray = lowerCaseStr.split(" ");
-  //   // console.log(lowerArray);
-  //   var symbolArray = symbolsStr.split(" ");
-  //   // console.log(symbolArray);
+  //   var charTotal = (total / numPeople).toFixed(2);
+  //   document.querySelector("#characters").textContent = charTotal;
   // }
+
+  // criteria selected in checkbox
+  generate.addEventListener('click', () => { 
+    var Characters = CharactersEl.value;
+    console.log(Characters);
+  });
+
 // consolidated strings and generate random characters
   function getRandomNumber() {
     var numbers = '123456789';
     return numbers[Math.floor(Math.random() * numbers.length)];
   }
-  console.log(getRandomNumber());
+  // console.log(getRandomNumber());
 
   function getRandomUpperCase() {
     var upperCase = 'ABCDEFGHIJKLMNOPQRSTUV';
@@ -89,6 +75,7 @@ var CharactersEl = document.getElementById("characters");
   }
   // console.log(getRandomSymbols());
 
+
   // if (numbers.checked === true) {
   //   // numbers show in password
 
@@ -97,6 +84,9 @@ var CharactersEl = document.getElementById("characters");
   //   numbers === false
   //   // no numbers in password
   // }
+
+
+
 
 
   // // Write password to the #password input
@@ -108,9 +98,9 @@ var CharactersEl = document.getElementById("characters");
 
   // }
 
-  // // Add event listener to generate button
+  // // // Add event listener to generate button
   // generateBtn.addEventListener("click", writePassword);
-  // // numbers.addEventListener("click", writePassword);
+
 
 
 
@@ -119,6 +109,7 @@ var CharactersEl = document.getElementById("characters");
 // check boxes to select password criteria
 // https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
 // https://www.w3schools.com/jsref/prop_checkbox_checked.asp
+// https://stackoverflow.com/questions/59340866/random-password-generator-javascript-not-working
 //strings of parameters into split into arrays
 // https://www.tutorialrepublic.com/faq/how-to-explode-a-string-in-javascript.php#:~:text=Answer%3A%20Use%20the%20JavaScript%20split,array%2C%20containing%20the%20splitted%20values.
 // generate random
