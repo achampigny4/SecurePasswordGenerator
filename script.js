@@ -42,34 +42,13 @@ generate.addEventListener('click', () => {
 // define generatePassword
 function generatePassword(number, upper, lower, symbol) {
   // start with no password
-  var Password = "";
-  // var length = Number
-  // var characters = length;
-  // number of checked criteria
-  var criteria = {};
-  if (numbersEl) Password += number;
-  // console.log(numbers)
-  if (upperCaseEl) Password += upper;
-  if (lowerCaseEl) Password += lower;
-  if (symbolsEl) Password += symbol;
-
-  //   // for (var i = 0; i < characters; i++) {
-  //   //       function characters() {
-  //   //     characters = document.querySelector("characters").value;
-  //   //     document.querySelector("characters").innerHTML = "" + characters;
-  //   //       }
-};
+  var password = "";
+  // number of types of criteria selected
+    var numberOfCriteria = lower + upper + number + symbol;
+    // console.log(numberOfCriteria) //...should show a number of how many criteria checkboxes are checked but it's not
 
 
-// function generateLength () {
-//   var length = Number
-//   var characters = length;
-// for (var i = 0; i < characters; i++) ;
-// // {
-// //   function characters() {
-// // characters = document.querySelector("characters").value;
-// // document.querySelector("characters").innerHTML = "" + characters;
-//   }
+};  
 
 // strings of characters
 function getRandomNumber() {
@@ -94,35 +73,18 @@ function getRandomSymbols() {
   const symbols = '!@#$%^&*()_+-=<>?,./:";[]{}';
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
-  // console.log(getRandomSymbols());
 
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 
-  // if (numbers.checked === true) {
-  //   // numbers show in password
+    passwordText.value = password;
 
-  //   console.log(numbersArray) //??
-  // } else {
-  //   numbers === false
-  //   // no numbers in password
-  // }
+  }
 
-
-
-
-
-  // // Write password to the #password input
-  // function writePassword() {
-  //   var password = generatePassword();
-  //   var passwordText = document.querySelector("#password");
-
-  //   passwordText.value = password;
-
-  // }
-
-  // // // Add event listener to generate button
-  // generateBtn.addEventListener("click", writePassword);
-
-
+  // // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
 
 
 
@@ -136,4 +98,5 @@ function getRandomSymbols() {
 // generate random
 // https://stackoverflow.com/questions/5836833/create-an-array-with-random-values
 // password length
+// https://codepen.io/FlorinPop17/pen/BaBePej
 // https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation 
