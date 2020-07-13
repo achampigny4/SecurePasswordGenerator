@@ -1,6 +1,9 @@
-// // Assignment Code
+//  DELETE CONOSOL.LOGS WHEN COMPLETE BEFORE FINAL SUBMIT
+
+
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
-// // check boxes to select password criteria
+// check boxes to select password criteria
 var numbersEl = document.querySelector("#numbers");
 var upperCaseEl = document.querySelector("#upper");
 var lowerCaseEl = document.querySelector("#lower");
@@ -9,22 +12,27 @@ var CharactersEl = document.getElementById("#characters");
 var passwordEl = document.getElementById("#password");
 
 // //select number of characters between 8 and 128
-// var characters = document.querySelector("#characters");
-// // console.log(characters.value);
-
 // //length
+// objects to access random string characters to create password length
+  var random = {
+  number: getRandomNumber,
+  upper: getRandomUpperCase,
+  lower: getRandomLowerCase,
+  symbol: getRandomSymbols,
+};
 
-// // var password = "";
-// // for (var i = 0; i < arrayLength; i++) {
+// start with no password
+var password = "";
+// // for (var i = 0; i < characters; i++) {
 // //   password = password + characters.charAt(Math.floor(Math.random() = Math.floor(characters)));
 
 //   // start with no password length
-//   // var arrayLength = [];
+//   // var characters = [];
 //   // length = characters;
 //   // console.log(characters.value)
 //   // // loop over criteria
-//   // for (var i = 0; i < arrayLength; i++) {
-//   //   function arrayLength() {
+//   // for (var i = 0; i < characters; i++) {
+//   //   function characters() {
 //   //     characters = document.querySelector("characters").value;
 //   //     document.querySelector("characters").innerHTML = "" + characters;
 //   // }
@@ -44,7 +52,7 @@ var passwordEl = document.getElementById("#password");
 //   document.querySelector("#characters").textContent = charTotal;
 // }
 
-// criteria selected in checkbox
+// criteria selected in checkboxs
 generate.addEventListener('click', () => {
   var Characters = CharactersEl.value;
   // console.log(Characters);
@@ -57,10 +65,11 @@ generate.addEventListener('click', () => {
   var checkSymbol = symbolsEl.checked === true;
   // console.log(checkSymbol);
 
+  // assigns true checked criteria to passwordEl
   passwordEl.innerText = generatePassword(Characters, checkNumbers, checkUpper, checkLower, checkSymbol);
 });
 
-// consolidated strings and generate random characters
+// strings of characters
 function getRandomNumber() {
   var numbers = '123456789';
   return numbers[Math.floor(Math.random() * numbers.length)];
