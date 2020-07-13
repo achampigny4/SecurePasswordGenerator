@@ -34,45 +34,53 @@ var passwordEl = document.getElementById("password");
 //   // if (length < 8)
 
 //   // define generate password
-  // function genPassword(event) {
-  //   event.preventDefault();
+// function genPassword(event) {
+//   event.preventDefault();
 
-  //   var total = document.querySelector("#characters").textContent;
-  //   var characters = document.querySelector("#generate").value;
+//   var total = document.querySelector("#characters").textContent;
+//   var characters = document.querySelector("#generate").value;
 
-  //   var charTotal = (total / numPeople).toFixed(2);
-  //   document.querySelector("#characters").textContent = charTotal;
-  // }
+//   var charTotal = (total / numPeople).toFixed(2);
+//   document.querySelector("#characters").textContent = charTotal;
+// }
 
-  // criteria selected in checkbox
-  generate.addEventListener('click', () => { 
-    var Characters = CharactersEl.value;
-    console.log(Characters);
-  });
+// criteria selected in checkbox
+generate.addEventListener('click', () => {
+  var Characters = CharactersEl.value;
+  console.log(Characters);
+  var checkNumbers = numbersEl.checked === true;
+  console.log(checkNumbers);
+  var checkUpper = upperCaseEl.checked === true;
+  console.log(checkUpper);
+  var checkLower = lowerCaseEl.checked === true;
+  console.log(checkLower);
+  var checkSymbol = symbolsEl.checked === true;
+  console.log(checkSymbol);
+});
 
 // consolidated strings and generate random characters
-  function getRandomNumber() {
-    var numbers = '123456789';
-    return numbers[Math.floor(Math.random() * numbers.length)];
-  }
-  // console.log(getRandomNumber());
+function getRandomNumber() {
+  var numbers = '123456789';
+  return numbers[Math.floor(Math.random() * numbers.length)];
+}
+// console.log(getRandomNumber());
 
-  function getRandomUpperCase() {
-    var upperCase = 'ABCDEFGHIJKLMNOPQRSTUV';
-    return upperCase[Math.floor(Math.random() * upperCase.length)];
-  }
-  // console.log(getRandomUpperCase());
+function getRandomUpperCase() {
+  var upperCase = 'ABCDEFGHIJKLMNOPQRSTUV';
+  return upperCase[Math.floor(Math.random() * upperCase.length)];
+}
+// console.log(getRandomUpperCase());
 
-  function getRandomLowerCase() {
-    var lowerCase = 'abcdefghijklmnopqrstuv';
-    return lowerCase[Math.floor(Math.random() * lowerCase.length)];
-  }
-  // console.log(getRandomLowerCase());
+function getRandomLowerCase() {
+  var lowerCase = 'abcdefghijklmnopqrstuv';
+  return lowerCase[Math.floor(Math.random() * lowerCase.length)];
+}
+// console.log(getRandomLowerCase());
 
-  function getRandomSymbols() {
-    const symbols = '!@#$%^&*()_+-=<>?,./:";[]{}';
-    return symbols[Math.floor(Math.random() * symbols.length)];
-  }
+function getRandomSymbols() {
+  const symbols = '!@#$%^&*()_+-=<>?,./:";[]{}';
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
   // console.log(getRandomSymbols());
 
 
