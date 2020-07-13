@@ -5,8 +5,8 @@ var numbersEl = document.querySelector("#numbers");
 var upperCaseEl = document.querySelector("#upper");
 var lowerCaseEl = document.querySelector("#lower");
 var symbolsEl = document.querySelector("#symbol");
-var CharactersEl = document.getElementById("characters");
-var passwordEl = document.getElementById("password");
+var CharactersEl = document.getElementById("#characters");
+var passwordEl = document.getElementById("#password");
 
 // //select number of characters between 8 and 128
 // var characters = document.querySelector("#characters");
@@ -47,15 +47,17 @@ var passwordEl = document.getElementById("password");
 // criteria selected in checkbox
 generate.addEventListener('click', () => {
   var Characters = CharactersEl.value;
-  console.log(Characters);
+  // console.log(Characters);
   var checkNumbers = numbersEl.checked === true;
-  console.log(checkNumbers);
+  // console.log(checkNumbers);
   var checkUpper = upperCaseEl.checked === true;
-  console.log(checkUpper);
+  // console.log(checkUpper);
   var checkLower = lowerCaseEl.checked === true;
-  console.log(checkLower);
+  // console.log(checkLower);
   var checkSymbol = symbolsEl.checked === true;
-  console.log(checkSymbol);
+  // console.log(checkSymbol);
+
+  passwordEl.innerText = generatePassword(Characters, checkNumbers, checkUpper, checkLower, checkSymbol);
 });
 
 // consolidated strings and generate random characters
